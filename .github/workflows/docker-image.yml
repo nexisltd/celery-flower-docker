@@ -30,7 +30,7 @@ jobs:
           uses: docker/metadata-action@v4
           with:
             images: |
-              /nexisltd/celery-flower
+              nexisltd/celery-flower
             labels: |
               maintainer=Team Nexis
               org.opencontainers.image.title=Celery Flowr Container
