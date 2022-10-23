@@ -4,7 +4,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 RUN rm requirements.txt
-COPY config.py .
+COPY flowerconfig.py .
 RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
 USER appuser
 CMD ["celery", "flower", "--conf=flowerconfig.py"]
