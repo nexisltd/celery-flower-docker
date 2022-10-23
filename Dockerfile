@@ -7,4 +7,4 @@ RUN rm requirements.txt
 COPY config.py .
 RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
 USER appuser
-CMD ["celery", "flower", "--conf=config"]
+CMD ["celery", "flower", "--conf=config.py"]
